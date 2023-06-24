@@ -69,11 +69,11 @@ class TicketService {
         console.log(`Total amount is ${totalAmount}`)
         console.log(`Total reserved seat is ${totalSeats}`)
 
-        // const ticketPayment = new TicketPaymentService()
-        // ticketPayment.makePayment(accountId, totalAmount) // payment request made to the `TicketPaymentService
+        const ticketPayment = new TicketPaymentService()
+        ticketPayment.makePayment(accountId, totalAmount) // payment request made to the `TicketPaymentService
 
-        // const seatReservation = new SeatReservationService()
-        // seatReservation.reserveSeat(accountId, totalSeats) // reservation request made to the `SeatReservationService`
+        const seatReservation = new SeatReservationService()
+        seatReservation.reserveSeat(accountId, totalSeats) // reservation request made to the `SeatReservationService`
        
     }
 }
