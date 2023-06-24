@@ -1,4 +1,4 @@
-const TicketTypeRequest = require('./TicketTypeRequest')
+const TicketTypeRequest = require('./TicketTypeRequest') // The TicketTypeRequest
 const TicketPaymentService = require('./TicketPaymentService') // The TicketPaymentService
 const SeatReservationService = require('./SeatReservationService') // SeatReservationService
 
@@ -57,7 +57,7 @@ class TicketService {
             }
     
             if (ticketType == "INFANT") {
-                totalSeats = adultTicketCount;
+              continue;
             }
             if (ticketType == "CHILD") {
                 totalSeats += noOfTickets;
@@ -69,11 +69,11 @@ class TicketService {
         console.log(`Total amount is ${totalAmount}`)
         console.log(`Total reserved seat is ${totalSeats}`)
 
-        const ticketPayment = new TicketPaymentService()
-        ticketPayment.makePayment(accountId, totalAmount) // payment request made to the `TicketPaymentService
+        // const ticketPayment = new TicketPaymentService()
+        // ticketPayment.makePayment(accountId, totalAmount) // payment request made to the `TicketPaymentService
 
-        const seatReservation = new SeatReservationService()
-        seatReservation.reserveSeat(accountId, totalSeats) // reservation request made to the `SeatReservationService`
+        // const seatReservation = new SeatReservationService()
+        // seatReservation.reserveSeat(accountId, totalSeats) // reservation request made to the `SeatReservationService`
        
     }
 }
@@ -82,8 +82,8 @@ class TicketService {
 const ticketService = new TicketService()
 const accountId = 1;
 const ticketTypeRequests = [
-    new TicketTypeRequest("ADULT", 2),
-    new TicketTypeRequest("CHILD", 2),
+    new TicketTypeRequest("ADULT", 6),
+    new TicketTypeRequest("CHILD", 6),
     new TicketTypeRequest("INFANT", 6)
     ];
 
