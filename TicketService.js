@@ -82,9 +82,9 @@ class TicketService {
 const ticketService = new TicketService()
 const accountId = 1;
 const ticketTypeRequests = [
-    new TicketTypeRequest("ADULT", 6),
-    new TicketTypeRequest("CHILD", 6),
-    new TicketTypeRequest("INFANT", 6)
+    new TicketTypeRequest("ADULT", 1),
+    new TicketTypeRequest("CHILD", 1),
+    new TicketTypeRequest("INFANT", 1)
     ];
 
     Object.freeze(ticketTypeRequests) //immutable TicketTypeRequest object
